@@ -1,4 +1,5 @@
 public class Calculator {
+    private String s;
 
     public double calculate(String formula) {
         String[] strings = formula.split(" ");
@@ -20,5 +21,13 @@ public class Calculator {
         if (operate.equals("*")) return result *= num;
         System.out.println("연산자를 잘못 입력했습니다.");
         return 0;
+    }
+
+    public String getS() {
+        return s;
+    }
+
+    public void setS(String s) {
+        this.s = s;
     }
 }
