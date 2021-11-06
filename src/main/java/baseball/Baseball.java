@@ -16,21 +16,16 @@ public class Baseball {
         }
     }
 
-    public int answerReplayGame() {
-        System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
-        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
-        return scanner.nextInt();
-    }
-
     public String createNumber() {
         int number = 0;
-        boolean[] booleans = new boolean[9];
+        boolean[] check = new boolean[9];
         for (int i = 0; i < 3; i++) {
             int randomNumber = random.nextInt(9) + 1;
-            if (booleans[randomNumber - 1] == true) {
+            if (check[randomNumber - 1] == true) {
                 i--;
                 continue;
             }
+            check[randomNumber - 1] = true;
             number *= 10;
             number += randomNumber;
         }
@@ -62,6 +57,12 @@ public class Baseball {
 
             System.out.println(ball + "볼 " + strike + "스트라이크");
         }
+    }
+
+    public int answerReplayGame() {
+        System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
+        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+        return scanner.nextInt();
     }
 
     private String insertNum() {

@@ -15,7 +15,7 @@ class BaseballTest {
 
     @Test
     void setNumber() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             baseball.createNumber();
             String number = baseball.createNumber();
             System.out.println(number);
