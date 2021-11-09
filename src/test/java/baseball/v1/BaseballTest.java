@@ -1,12 +1,8 @@
-package baseball;
+package baseball.v1;
 
+import baseball.v1.Baseball;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BaseballTest {
     private Baseball baseball;
