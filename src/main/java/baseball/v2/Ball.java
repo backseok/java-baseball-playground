@@ -11,7 +11,7 @@ public class Ball {
 
     public BallStatus play(Ball answerBall) {
         return BallStatus.compare(this, answerBall);
-    }
+    } //!
 
     public int getIndex() {
         return index;
